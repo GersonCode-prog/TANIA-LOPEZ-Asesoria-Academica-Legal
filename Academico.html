@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría Académica y Redacción | Tu Firma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="FullLogo.png" alt="TANIA LOPEZ Logo" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold">TANIA LOPEZ</h1>
+                        <p class="text-sm text-blue-200">Asesoría Académica & Legal</p>
+                    </div>
+                </a>
+                
+                <!-- Navegación desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                    <a href="index.html#servicios" class="hover:text-amber-400 transition">Servicios</a>
+                    <a href="index.html#contacto" class="hover:text-amber-400 transition">Contacto</a>
+                </nav>
+                
+                <a href="index.html#contacto" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-6 rounded-lg transition transform hover:scale-105">Cotizar</a>
+                
+                <!-- Botón hamburguesa -->
+                <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-white transition duration-300" id="line2"></span>
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line3"></span>
+                </button>
+            </div>
+            
+            <!-- Menú móvil -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-blue-700 pt-4">
+                <a href="index.html#inicio" class="block py-2 hover:text-amber-400 transition">Inicio</a>
+                <a href="index.html#servicios" class="block py-2 hover:text-amber-400 transition">Servicios</a>
+                <a href="index.html#contacto" class="block py-2 hover:text-amber-400 transition">Contacto</a>
+                <a href="index.html#contacto" class="block mt-4 bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition text-center">Cotizar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-800 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <a href="index.html" class="text-blue-200 hover:text-white">Inicio</a>
+                <span class="text-blue-400">/</span>
+                <span class="text-amber-400">Asesoría Académica</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Asesoría Académica y Redacción Profesional</h1>
+            <p class="text-xl text-blue-100 max-w-3xl">Transformamos tu investigación en una tesis de excelencia con estructura sólida, redacción impecable y cumplimiento total de normas académicas.</p>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Nuestros Servicios Académicos</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg border-l-4 border-blue-900">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Creación y Estructura de Tesis</h3>
+                    <p class="text-gray-700 mb-4">Te acompañamos desde el primer paso hasta la versión final.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Definición de tema:</strong> Análisis profundo y viabilidad del tema</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Estructura completa:</strong> Introducción, capítulos, conclusiones y recomendaciones</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Marco teórico:</strong> Revisión exhaustiva de literatura</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Metodología:</strong> Diseño de investigación coherente y riguroso</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-blue-900 text-white rounded-lg">
+                        <p class="text-sm"><strong>Tiempo promedio:</strong> 4-8 semanas según complejidad</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 shadow-lg border-l-4 border-amber-600">
+                    <div class="text-4xl mb-4">✏️</div>
+                    <h3 class="text-2xl font-bold text-amber-900 mb-4">Corrección de Estilo y Formato</h3>
+                    <p class="text-gray-700 mb-4">Pulimos tu contenido hasta la perfección académica.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Formato APA (7ª edición):</strong> Cumplimiento total</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Formato Chicago y MLA:</strong> Disponibles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Redacción académica:</strong> Claridad, coherencia y precisión</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Revisión de referencias:</strong> Bibliografía completa y correcta</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-amber-700 text-white rounded-lg">
+                        <p class="text-sm"><strong>Tiempo promedio:</strong> 1-2 semanas</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg border-l-4 border-green-600">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">Revisión Anti-Plagio Especializada</h3>
+                    <p class="text-gray-700 mb-4">Garantizamos originalidad y autenticidad académica.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Análisis completo:</strong> Turnitin y herramientas especializadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Reporte detallado:</strong> Identificación de similitudes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Correcciones:</strong> Parafraseo y citas adecuadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Certificado:</strong> De originalidad al 100%</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-green-700 text-white rounded-lg">
+                        <p class="text-sm"><strong>Garantizado:</strong> Menos del 10% de similitud</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 shadow-lg border-l-4 border-purple-600">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-2xl font-bold text-purple-900 mb-4">Asesoría en Metodología</h3>
+                    <p class="text-gray-700 mb-4">Diseñamos el enfoque perfecto para tu investigación.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Investigación cualitativa:</strong> Entrevistas, grupos focales</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Investigación cuantitativa:</strong> Encuestas, análisis estadístico</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Investigación mixta:</strong> Combinación de métodos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Análisis de datos:</strong> SPSS, Atlas.ti, NVivo</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-purple-700 text-white rounded-lg">
+                        <p class="text-sm"><strong>Especialidad:</strong> Metodología científica rigurosa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Nuestro Proceso de Trabajo</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Consulta Inicial</h3>
+                    <p class="text-gray-600">Entendemos tu proyecto y necesidades específicas</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Propuesta Personalizada</h3>
+                    <p class="text-gray-600">Creamos un plan ajustado a tu tesis y presupuesto</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Ejecución y Seguimiento</h3>
+                    <p class="text-gray-600">Trabajo iterativo con feedback continuo</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Entrega Final</h3>
+                    <p class="text-gray-600">Tesis completa, revisada y lista para defensa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Éxito -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Casos de Éxito</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl">⭐</div>
+                        <span class="text-sm text-gray-500 ml-2">Carlos M. - Universidad Nacional</span>
+                    </div>
+                    <p class="text-gray-700 italic">"Gracias a su asesoría, mi tesis pasó con honores. La estructura y correcciones fueron clave para mi defensa exitosa."</p>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl">⭐</div>
+                        <span class="text-sm text-gray-500 ml-2">María S. - Postgrado Privado</span>
+                    </div>
+                    <p class="text-gray-700 italic">"Profesionales muy atentos. Me ayudaron con la metodología completa y el resultado superó mis expectativas."</p>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+                    <div class="flex items-center mb-4">
+                        <div class="text-4xl">⭐</div>
+                        <span class="text-sm text-gray-500 ml-2">Juan P. - Doctorado</span>
+                    </div>
+                    <p class="text-gray-700 italic">"La revisión anti-plagio fue determinante. Con 8% de similitud, mi doctorando fue aprobado sin cambios."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-teal-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Listo para Llevar tu Tesis al Siguiente Nivel?</h2>
+            <p class="text-xl text-blue-100 mb-8">Solicita una consulta gratuita y conoce cómo podemos ayudarte</p>
+            <a href="index.html#contacto" class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-4 px-10 rounded-lg transition transform hover:scale-105 text-lg">
+                Cotizar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">TANIA LOPEZ</h4>
+                    <p class="text-blue-200">Soluciones integrales para tus proyectos académicos y legales.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="index.html" class="hover:text-amber-400 transition">Inicio</a></li>
+                        <li><a href="Consultoria.html" class="hover:text-amber-400 transition">Consultoría Legal</a></li>
+                        <li><a href="index.html#contacto" class="hover:text-amber-400 transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" class="hover:text-amber-400 transition">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 TANIA LOPEZ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nuestros servicios académicos y legales. Cotización personalizada después de entender tu proyecto específico.">
+    <title>Servicios | Asesoría Académica y Legal | Tu Firma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="FullLogo.png" alt="TANIA LOPEZ Logo" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold">TANIA LOPEZ</h1>
+                        <p class="text-sm text-blue-200">Asesoría Académica & Legal</p>
+                    </div>
+                </a>
+                
+                <!-- Navegación desktop -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm">
+                    <a href="index.html#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                    <a href="index.html#servicios" class="hover:text-amber-400 transition">Servicios</a>
+                    <a href="Precios.html" class="text-amber-400">Precios</a>
+                    <a href="Blog.html" class="hover:text-amber-400 transition">Blog</a>
+                    <a href="Testimonios.html" class="hover:text-amber-400 transition">Testimonios</a>
+                    <a href="index.html#contacto" class="hover:text-amber-400 transition">Contacto</a>
+                </nav>
+                
+                <a href="index.html#contacto" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-6 rounded-lg transition">Cotizar</a>
+                
+                <!-- Botón hamburguesa -->
+                <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-white transition duration-300" id="line2"></span>
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line3"></span>
+                </button>
+            </div>
+            
+            <!-- Menú móvil -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-blue-700 pt-4">
+                <a href="index.html#inicio" class="block py-2 hover:text-amber-400 transition">Inicio</a>
+                <a href="index.html#servicios" class="block py-2 hover:text-amber-400 transition">Servicios</a>
+                <a href="Precios.html" class="block py-2 text-amber-400">Precios</a>
+                <a href="Blog.html" class="block py-2 hover:text-amber-400 transition">Blog</a>
+                <a href="Testimonios.html" class="block py-2 hover:text-amber-400 transition">Testimonios</a>
+                <a href="index.html#contacto" class="block py-2 hover:text-amber-400 transition">Contacto</a>
+                <a href="index.html#contacto" class="block mt-4 bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition text-center">Cotizar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-blue-900 to-teal-800 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Nuestros Servicios</h1>
+            <p class="text-2xl text-blue-100 mb-8">Cada proyecto es único. Hablemos de tus necesidades específicas</p>
+            <p class="text-lg text-blue-200">Cotización personalizada después de entender tu proyecto</p>
+        </div>
+    </section>
+
+    <!-- Servicios Académicos -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Servicios Académicos</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-l-4 border-blue-500 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">📚 Estructura y Redacción</h3>
+                    <p class="text-gray-700 mb-4">Diseñamos la estructura completa de tu tesis, mejoramos la redacción académica y aseguramos coherencia en todo el documento.</p>
+                    <ul class="space-y-2 text-gray-700 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> Organización lógica de capítulos</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> Mejora de lenguaje académico</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> Coherencia y fluidez</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> Revisión de argumentación</li>
+                    </ul>
+                    <a href="index.html#contacto" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-6 rounded-lg transition">
+                        Consultar
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-l-4 border-green-500 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">🔍 Revisión Anti-Plagio</h3>
+                    <p class="text-gray-700 mb-4">Análisis completo de similitud con Turnitin. Si hay coincidencias, realizamos parafraseo y ajustes para garantizar originalidad.</p>
+                    <ul class="space-y-2 text-gray-700 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Análisis con Turnitin</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Parafraseo profesional</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Revisión de citas</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Reporte detallado</li>
+                    </ul>
+                    <a href="index.html#contacto" class="inline-block bg-green-900 hover:bg-green-800 text-white font-bold py-2 px-6 rounded-lg transition">
+                        Consultar
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 border-l-4 border-amber-500 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-amber-900 mb-4">📋 Formato y Referencias (APA)</h3>
+                    <p class="text-gray-700 mb-4">Cumplimiento 100% de normas APA. Incluye portada, índices, bibliografía y todas las citas correctamente formateadas.</p>
+                    <ul class="space-y-2 text-gray-700 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-amber-600">✓</span> Normas APA 7ª edición</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-600">✓</span> Bibliografía completa</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-600">✓</span> Índices y pie de página</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-600">✓</span> Formateo de tablas y figuras</li>
+                    </ul>
+                    <a href="index.html#contacto" class="inline-block bg-amber-900 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-lg transition">
+                        Consultar
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-l-4 border-purple-500 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-purple-900 mb-4">🎓 Preparación para Defensa</h3>
+                    <p class="text-gray-700 mb-4">Entrenamiento intensivo, ensayos, simulacros de preguntas y asesoría estratégica para defender tu tesis con confianza.</p>
+                    <ul class="space-y-2 text-gray-700 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Sesiones de entrenamiento</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Simulacros de defensa</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Preguntas anticipadas</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Estrategia de presentación</li>
+                    </ul>
+                    <a href="index.html#contacto" class="inline-block bg-purple-900 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg transition">
+                        Consultar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Legales -->
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Servicios Legales</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 border-l-4 border-red-500 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-red-900 mb-4">⚖️ Derechos de Autor</h3>
+                    <p class="text-gray-700 mb-4">Protección legal de tu obra. Registro y defensa de derechos de autor para asegurar que tu investigación esté completamente protegida.</p>
+                    <ul class="space-y-2 text-gray-700 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-red-500">✓</span> Asesoría legal completa</li>
+                        <li class="flex items-center gap-2"><span class="text-red-500">✓</span> Trámites de registro</li>
+                        <li class="flex items-center gap-2"><span class="text-red-500">✓</span> Protección de derechos</li>
+                        <li class="flex items-center gap-2"><span class="text-red-500">✓</span> Documentación legal</li>
+                    </ul>
+                    <a href="index.html#contacto" class="inline-block bg-red-900 hover:bg-red-800 text-white font-bold py-2 px-6 rounded-lg transition">
+                        Consultar
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 border-l-4 border-teal-500 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-teal-900 mb-4">🛡️ Propiedad Intelectual</h3>
+                    <p class="text-gray-700 mb-4">Protección integral de tu investigación. Incluye análisis de patentes, secretos comerciales y estrategia de IP para tu proyecto.</p>
+                    <ul class="space-y-2 text-gray-700 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-teal-600">✓</span> Análisis de patentes</li>
+                        <li class="flex items-center gap-2"><span class="text-teal-600">✓</span> Secretos comerciales</li>
+                        <li class="flex items-center gap-2"><span class="text-teal-600">✓</span> Estrategia de protección</li>
+                        <li class="flex items-center gap-2"><span class="text-teal-600">✓</span> Asesoría especializada</li>
+                    </ul>
+                    <a href="index.html#contacto" class="inline-block bg-teal-900 hover:bg-teal-800 text-white font-bold py-2 px-6 rounded-lg transition">
+                        Consultar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Trabajamos -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Cómo Trabajamos</h2>
+            
+            <div class="space-y-8">
+                <!-- Paso 1 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-2xl">1</div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3">Contacto Inicial</h3>
+                        <p class="text-gray-700">Te comunicas con nosotros describiendo tu proyecto, tus necesidades y tu situación específica. Respondemos en menos de 24 horas.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-2xl">2</div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3">Consulta Detallada</h3>
+                        <p class="text-gray-700">Realizamos una llamada o videollamada para entender profundamente tu tesis, tiempo disponible, complejidad y exactamente qué necesitas.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-2xl">3</div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3">Propuesta Personalizada</h3>
+                        <p class="text-gray-700">Te enviamos una propuesta con los servicios específicos que necesitas, el alcance del trabajo y el valor acordado.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-2xl">4</div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3">Acuerdo Monetario</h3>
+                        <p class="text-gray-700">Llegamos a un acuerdo sobre la inversión. Puedes pagar 50% de anticipación y 50% al finalizar, o 100% según tu preferencia.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 5 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-2xl">5</div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3">Inicio del Proyecto</h3>
+                        <p class="text-gray-700">Recibimos el pago acordado y comenzamos inmediatamente. Te asignamos un gestor de proyecto que te acompañará en todo el proceso.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 6 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-2xl">6</div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3">Entrega y Soporte</h3>
+                        <p class="text-gray-700">Recibimos los entregables acordados. Si pagaste 50% inicial, liquidamos el saldo restante. Incluye 2 semanas de ajustes y soporte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelos de Pago -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-teal-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-12 text-center">Modelos de Pago Flexibles</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Opción 1 -->
+                <div class="bg-white rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">50% + 50%</h3>
+                    <p class="text-gray-700 mb-6">La opción más popular. Perfecta si quieres reducir riesgos.</p>
+                    <div class="bg-blue-50 rounded-lg p-4 mb-6">
+                        <p class="font-semibold text-blue-900 mb-3">💳 Desglose:</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><strong>50% de anticipación</strong> → Iniciamos el proyecto</li>
+                            <li><strong>50% al finalizar</strong> → Al recibir los entregables</li>
+                        </ul>
+                    </div>
+                    <p class="text-sm text-gray-600">✓ Bajo riesgo para ti | ✓ Compromiso mutuo | ✓ Mayor flexibilidad</p>
+                </div>
+
+                <!-- Opción 2 -->
+                <div class="bg-white rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">100% por Adelantado</h3>
+                    <p class="text-gray-700 mb-6">Si prefieres pagar todo de una vez. Recibe descuento especial.</p>
+                    <div class="bg-amber-50 rounded-lg p-4 mb-6">
+                        <p class="font-semibold text-amber-900 mb-3">💳 Desglose:</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><strong>100% al iniciar</strong> → Máxima prioridad</li>
+                            <li><strong>Descuento 5-10%</strong> → Por pago completo</li>
+                        </ul>
+                    </div>
+                    <p class="text-sm text-gray-600">✓ Mejor tarifa | ✓ Máxima prioridad | ✓ Sin sorpresas</p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 text-white">
+                <p class="text-center text-lg mb-4">
+                    <strong>💡 Sin precios fijos.</strong> La inversión depende de tu proyecto, complejidad, urgencia y servicios necesarios.
+                </p>
+                <p class="text-center text-blue-100">
+                    Hablemos para encontrar la mejor solución para ti.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Preguntas Frecuentes</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-900 mb-2">¿Cómo determino el costo de mi proyecto?</h3>
+                    <p class="text-gray-700">Depende de varios factores: tipo de proyecto (pregrado, postgrado, doctorado), etapa en que se encuentra, servicios necesarios y urgencia. Por eso necesitamos hablar primero para darte una cotización exacta.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Cuál es el tiempo de respuesta?</h3>
+                    <p class="text-gray-700">Respondemos en menos de 24 horas. Luego agendamos una consulta para entender tu proyecto en profundidad y hacer una propuesta personalizada.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Puedo dividir el pago?</h3>
+                    <p class="text-gray-700">Sí. Ofrecemos dos opciones: 50% al inicio y 50% al finalizar, o 100% por adelantado (con descuento especial). Podemos discutir alternativas según tu situación.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Qué incluye después de la entrega?</h3>
+                    <p class="text-gray-700">Incluye 2 semanas de ajustes gratuitos. Si necesitas cambios mayores después, se cotiza por separado.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Es confidencial mi proyecto?</h3>
+                    <p class="text-gray-700">Completamente. Firmamos acuerdos de confidencialidad y nunca compartimos información de clientes sin autorización.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Qué pasa si no quedo satisfecho?</h3>
+                    <p class="text-gray-700">Trabajamos hasta que estés 100% satisfecho. Durante las 2 semanas de ajustes posteriores a la entrega, hacemos todos los cambios necesarios sin costo adicional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-teal-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Listo para Avanzar con tu Proyecto?</h2>
+            <p class="text-xl text-blue-100 mb-8">Contáctanos hoy mismo. Responderemos en menos de 24 horas.</p>
+            <a href="index.html#contacto" class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-4 px-10 rounded-lg transition transform hover:scale-105">
+                Solicitar Consulta Inicial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">TANIA LOPEZ</h4>
+                    <p class="text-blue-200">Soluciones integrales para tus proyectos académicos y legales.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="index.html" class="hover:text-amber-400 transition">Inicio</a></li>
+                        <li><a href="Precios.html" class="hover:text-amber-400 transition">Precios</a></li>
+                        <li><a href="Blog.html" class="hover:text-amber-400 transition">Blog</a></li>
+                        <li><a href="Testimonios.html" class="hover:text-amber-400 transition">Testimonios</a></li>
+                        <li><a href="CasosDeEstudio.html" class="hover:text-amber-400 transition">Casos de Estudio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" class="hover:text-amber-400 transition">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 TANIA LOPEZ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

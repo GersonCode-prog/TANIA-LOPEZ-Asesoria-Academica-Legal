@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TL Asesoría Académica & Legal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- WhatsApp Button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="FullLogo.png" alt="TANIA LOPEZ Logo" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold">TANIA LOPEZ</h1>
+                        <p class="text-sm text-blue-200">Asesoría Académica & Legal</p>
+                    </div>
+                </a>
+                
+                <!-- Navegación desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                    <a href="#servicios" class="hover:text-amber-400 transition">Servicios</a>
+                    <a href="Precios.html" class="hover:text-amber-400 transition">Precios</a>
+                    <a href="Blog.html" class="hover:text-amber-400 transition">Blog</a>
+                    <a href="Testimonios.html" class="hover:text-amber-400 transition">Testimonios</a>
+                    <a href="#contacto" class="hover:text-amber-400 transition">Contacto</a>
+                </nav>
+                
+                <a href="#contacto" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-6 rounded-lg transition transform hover:scale-105">Cotizar</a>
+                
+                <!-- Botón hamburguesa -->
+                <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-white transition duration-300" id="line2"></span>
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line3"></span>
+                </button>
+            </div>
+            
+            <!-- Menú móvil -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-blue-700 pt-4">
+                <a href="#inicio" class="block py-2 hover:text-amber-400 transition">Inicio</a>
+                <a href="#servicios" class="block py-2 hover:text-amber-400 transition">Servicios</a>
+                <a href="Precios.html" class="block py-2 hover:text-amber-400 transition">Precios</a>
+                <a href="Blog.html" class="block py-2 hover:text-amber-400 transition">Blog</a>
+                <a href="Testimonios.html" class="block py-2 hover:text-amber-400 transition">Testimonios</a>
+                <a href="#contacto" class="block py-2 hover:text-amber-400 transition">Contacto</a>
+                <a href="#contacto" class="block mt-4 bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition text-center">Cotizar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-800 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-amber-500 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Tu Asesoría Legal y Académica para Tesis sin Estrés</h2>
+                    <p class="text-xl text-blue-100 mb-8">Apoyo integral en investigación, redacción, formato APA y revisión legal para la defensa exitosa de tu tesis.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#servicios" class="bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 text-center">
+                            Explora Nuestros Servicios
+                        </a>
+                        <a href="#contacto" class="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition text-center">
+                            Solicitar Info
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-blue-900 font-bold">✓</div>
+                                <span>Revisión Anti-Plagio</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-blue-900 font-bold">✓</div>
+                                <span>Formato APA Certificado</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-blue-900 font-bold">✓</div>
+                                <span>Defensa Legal Respaldada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Nuestros Servicios Integrales</h2>
+                <p class="text-xl text-gray-600">Soluciones completas para tu proyecto académico y legal</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-900 rounded-xl flex items-center justify-center text-white text-2xl mb-6">📚</div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Apoyo Académico y Redacción</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Creación y Estructura de Tesis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Corrección de Estilo y Formato (APA, Chicago, MLA)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Revisión Anti-Plagio Especializada</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Asesoría en Metodología de Investigación</span>
+                        </li>
+                    </ul>
+                    <a href="Academico.html" class="mt-6 block w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition text-center">
+                        Más Información
+                    </a>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-teal-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">⚖️</div>
+                    <h3 class="text-2xl font-bold text-teal-900 mb-4">Consultoría y Marco Legal</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Asesoría en Derechos de Autor</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Protección de Propiedad Intelectual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Revisión Legal de Contenido Sensible</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3">✓</span>
+                            <span>Preparación para Defensa Legal</span>
+                        </li>
+                    </ul>
+                    <a href="Consultoria.html" class="mt-6 block w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 rounded-lg transition text-center">
+                        Más Información
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-20 bg-gradient-to-r from-blue-900 to-teal-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">¿Por Qué Elegirnos?</h2>
+                <p class="text-xl text-blue-100">Somos la única firma que combina experiencia académica y legal para tu tranquilidad</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="text-2xl font-bold mb-2">Experiencia Académica</h3>
+                    <p class="text-blue-100">Más de 10 años asesorando tesis en universidades de élite</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl mb-4">⚖️</div>
+                    <h3 class="text-2xl font-bold mb-2">Respaldo Legal</h3>
+                    <p class="text-blue-100">Abogados especializados en propiedad intelectual</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-2xl font-bold mb-2">Resultados Garantizados</h3>
+                    <p class="text-blue-100">98% de clientes con defensas exitosas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Solicita tu Cotización</h2>
+                <p class="text-xl text-gray-600">Completa el formulario y nos pondremos en contacto en 24 horas</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <form action="https://getform.io/f/bgdjxzla" method="POST" id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-2">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="servicio" class="block text-sm font-semibold text-gray-700 mb-2">Servicio de Interés *</label>
+                        <select id="servicio" name="servicio" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition">
+                            <option value="">Selecciona una opción</option>
+                            <option value="tesis">Asesoría de Tesis</option>
+                            <option value="legal">Consultoría Legal</option>
+                            <option value="ambos">Asesoría Completa (Tesis + Legal)</option>
+                            <option value="revision">Solo Revisión y Formato</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="mensaje" class="block text-sm font-semibold text-gray-700 mb-2">Tu Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition resize-none"></textarea>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                        <p class="text-sm text-gray-600">Tus datos serán tratados de forma confidencial. Consulta nuestro <a href="#" class="text-blue-600 font-semibold hover:underline">aviso de privacidad</a>.</p>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-900 to-teal-700 hover:from-blue-800 hover:to-teal-600 text-white font-bold py-4 rounded-lg transition transform hover:scale-105">
+                        Enviar Solicitud de Cotización
+                    </button>
+                    
+                    <p id="form-message" class="text-center font-semibold hidden"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones y Acreditaciones -->
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12">Certificaciones y Acreditaciones</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg p-8 shadow hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="font-bold text-blue-900 mb-2">ISO 9001</h3>
+                    <p class="text-gray-600 text-sm">Certificación de Calidad</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 shadow hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">📜</div>
+                    <h3 class="font-bold text-blue-900 mb-2">GDPR Certified</h3>
+                    <p class="text-gray-600 text-sm">Protección de Datos</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 shadow hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="font-bold text-blue-900 mb-2">Aliados Universidades</h3>
+                    <p class="text-gray-600 text-sm">20+ Instituciones</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 shadow hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">⭐</div>
+                    <h3 class="font-bold text-blue-900 mb-2">Turnitin Partner</h3>
+                    <p class="text-gray-600 text-sm">Revisor Oficial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">TANIA LOPEZ</h4>
+                    <p class="text-blue-200">Soluciones integrales para tus proyectos académicos y legales.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#servicios" class="hover:text-amber-400 transition">Servicios</a></li>
+                        <li><a href="#contacto" class="hover:text-amber-400 transition">Contacto</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" class="hover:text-amber-400 transition">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 TANIA LOPEZ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573001234567?text=Hola%20Tu%20Firma,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20tus%20servicios" 
+       target="_blank" 
+       class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center text-2xl transition transform hover:scale-110 z-40">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Chat Widget (Simulado) -->
+    <div id="chatWidget" class="fixed bottom-28 right-8 w-80 bg-white rounded-2xl shadow-2xl hidden z-40 flex flex-col">
+        <div class="bg-blue-900 text-white p-4 rounded-t-2xl flex justify-between items-center">
+            <span class="font-bold">Chat de Soporte</span>
+            <button onclick="toggleChat()" class="text-2xl">&times;</button>
+        </div>
+        <div class="flex-1 p-4 overflow-y-auto max-h-96 space-y-2">
+            <div class="bg-blue-100 p-2 rounded-lg text-sm">Hola 👋 ¿En qué podemos ayudarte?</div>
+            <div id="chatMessages"></div>
+        </div>
+        <div class="p-4 border-t flex gap-2">
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." class="flex-1 px-3 py-2 border rounded-lg text-sm focus:outline-none">
+            <button onclick="sendMessage()" class="bg-blue-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-800">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Botón para abrir Chat -->
+    <button onclick="toggleChat()" class="fixed bottom-40 right-8 bg-blue-900 hover:bg-blue-800 text-white p-4 rounded-full shadow-2xl flex items-center justify-center text-2xl transition transform hover:scale-110 z-40 hidden" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+ 
+</body>
+</html>

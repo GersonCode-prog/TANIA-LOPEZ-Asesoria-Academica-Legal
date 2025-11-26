@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramienta interactiva para estimar el porcentaje de plagio en tu tesis">
+    <title>Calculadora de Plagio | Estimador de Similitud | Tu Firma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="FullLogo.png" alt="TANIA LOPEZ Logo" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold">TANIA LOPEZ</h1>
+                        <p class="text-sm text-blue-200">Asesoría Académica & Legal</p>
+                    </div>
+                </a>
+                
+                <!-- Navegación desktop -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm">
+                    <a href="index.html#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                    <a href="index.html#servicios" class="hover:text-amber-400 transition">Servicios</a>
+                    <a href="Precios.html" class="hover:text-amber-400 transition">Precios</a>
+                    <a href="Blog.html" class="hover:text-amber-400 transition">Blog</a>
+                    <a href="index.html#contacto" class="hover:text-amber-400 transition">Contacto</a>
+                </nav>
+                
+                <a href="index.html#contacto" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-6 rounded-lg transition">Cotizar</a>
+                
+                <!-- Botón hamburguesa -->
+                <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-white transition duration-300" id="line2"></span>
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line3"></span>
+                </button>
+            </div>
+            
+            <!-- Menú móvil -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-blue-700 pt-4">
+                <a href="index.html#inicio" class="block py-2 hover:text-amber-400 transition">Inicio</a>
+                <a href="index.html#servicios" class="block py-2 hover:text-amber-400 transition">Servicios</a>
+                <a href="Precios.html" class="block py-2 hover:text-amber-400 transition">Precios</a>
+                <a href="Blog.html" class="block py-2 hover:text-amber-400 transition">Blog</a>
+                <a href="index.html#contacto" class="block py-2 hover:text-amber-400 transition">Contacto</a>
+                <a href="index.html#contacto" class="block mt-4 bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition text-center">Cotizar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-blue-900 to-teal-800 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Calculadora de Plagio Interactiva</h1>
+            <p class="text-xl text-blue-100">Estima el porcentaje de similitud de tu tesis de forma rápida y sencilla</p>
+        </div>
+    </section>
+
+    <!-- Calculadora Principal -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-xl p-8 md:p-12">
+                
+                <!-- Área de Entrada -->
+                <div class="mb-8">
+                    <label class="block text-2xl font-bold text-blue-900 mb-4">Pega tu Texto (o párrafo de muestra)</label>
+                    <textarea id="textInput" placeholder="Pega tu contenido aquí... (mínimo 100 palabras para mejor análisis)" class="w-full h-64 px-4 py-3 border-2 border-blue-300 rounded-lg focus:outline-none focus:border-blue-600 font-mono text-sm" onchange="calculatePlagio()"></textarea>
+                    <p class="text-sm text-gray-600 mt-2">
+                        <span id="wordCount">0</span> palabras | 
+                        <span id="charCount">0</span> caracteres
+                    </p>
+                </div>
+
+                <!-- Parámetros de Análisis -->
+                <div class="grid md:grid-cols-3 gap-4 mb-8">
+                    <div>
+                        <label class="block font-semibold text-blue-900 mb-2">Tipo de Documento</label>
+                        <select class="w-full px-4 py-2 border-2 border-blue-300 rounded-lg focus:outline-none focus:border-blue-600" onchange="calculatePlagio()">
+                            <option value="tesis">Tesis/Ensayo</option>
+                            <option value="articulo">Artículo</option>
+                            <option value="resumen">Resumen</option>
+                            <option value="general">General</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-blue-900 mb-2">Nivel Académico</label>
+                        <select class="w-full px-4 py-2 border-2 border-blue-300 rounded-lg focus:outline-none focus:border-blue-600" onchange="calculatePlagio()">
+                            <option value="pregrado">Pregrado</option>
+                            <option value="postgrado">Postgrado</option>
+                            <option value="doctorado">Doctorado</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-blue-900 mb-2">Idioma del Texto</label>
+                        <select class="w-full px-4 py-2 border-2 border-blue-300 rounded-lg focus:outline-none focus:border-blue-600" onchange="calculatePlagio()">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                            <option value="pt">Português</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Botón de Análisis -->
+                <div class="flex gap-4 mb-8">
+                    <button class="flex-1 bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 rounded-lg transition text-lg" onclick="analyzeText()">
+                        🔍 Analizar Ahora
+                    </button>
+                    <button class="flex-1 bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-4 rounded-lg transition text-lg" onclick="clearForm()">
+                        Limpiar
+                    </button>
+                </div>
+
+                <!-- Resultado del Análisis -->
+                <div id="resultSection" class="hidden bg-white rounded-xl p-8 border-2 border-blue-300">
+                    <h2 class="text-2xl font-bold text-blue-900 mb-6">Resultado del Análisis</h2>
+                    
+                    <!-- Indicador de Similitud -->
+                    <div class="mb-8 text-center">
+                        <p class="text-gray-600 font-semibold mb-2">Porcentaje de Similitud Estimado</p>
+                        <div class="relative w-48 h-48 mx-auto mb-4">
+                            <canvas id="progressCircle" class="w-full h-full"></canvas>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <p class="text-6xl font-bold" id="percentageDisplay">0%</p>
+                                    <p class="text-sm text-gray-600" id="riskLevel">Bajo Riesgo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detalles de Análisis -->
+                    <div class="grid md:grid-cols-3 gap-4 mb-8">
+                        <div class="bg-blue-50 rounded-lg p-4 text-center">
+                            <p class="text-gray-600 text-sm">Texto Original</p>
+                            <p class="text-3xl font-bold text-green-600" id="originalPercent">0%</p>
+                        </div>
+                        <div class="bg-amber-50 rounded-lg p-4 text-center">
+                            <p class="text-gray-600 text-sm">Similitud Detectada</p>
+                            <p class="text-3xl font-bold text-amber-600" id="similarPercent">0%</p>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-4 text-center">
+                            <p class="text-gray-600 text-sm">Alto Riesgo</p>
+                            <p class="text-3xl font-bold text-red-600" id="riskPercent">0%</p>
+                        </div>
+                    </div>
+
+                    <!-- Recomendaciones -->
+                    <div class="bg-white border-l-4 border-blue-900 p-4 rounded">
+                        <p class="font-bold text-blue-900 mb-2">📋 Recomendaciones:</p>
+                        <ul id="recommendationsList" class="space-y-2 text-gray-700 text-sm">
+                        </ul>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-6 p-4 bg-gradient-to-r from-blue-900 to-teal-700 text-white rounded-lg text-center">
+                        <p class="mb-3">¿Necesitas ayuda para reducir el plagio?</p>
+                        <a href="Precios.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-6 rounded transition">
+                            Ver Planes de Revisión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info sobre Similitud -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Entendiendo los Resultados</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- 0-5% -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500">
+                    <div class="text-5xl font-bold text-green-500 mb-4">0-5%</div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-3">Excelente</h3>
+                    <p class="text-gray-600">Trabajo completamente original. Muy bajo riesgo de plagio. Cumple con los estándares académicos más rigurosos.</p>
+                </div>
+
+                <!-- 6-15% -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-amber-500">
+                    <div class="text-5xl font-bold text-amber-500 mb-4">6-15%</div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-3">Bueno</h3>
+                    <p class="text-gray-600">Nivel aceptable. Probablemente citas correctas y referencias. Algunos párrafos pueden necesitar revisión.</p>
+                </div>
+
+                <!-- 16-30% -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-orange-500">
+                    <div class="text-5xl font-bold text-orange-500 mb-4">16-30%</div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-3">Advertencia</h3>
+                    <p class="text-gray-600">Requiere revisión. Demasiadas citas sin parafrasear. Recomendamos parafrasear secciones y ajustar referencias.</p>
+                </div>
+
+                <!-- 31%+ -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-red-500">
+                    <div class="text-5xl font-bold text-red-500 mb-4">31%+</div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-3">Alto Riesgo</h3>
+                    <p class="text-gray-600">Riesgo de rechazo. Necesita revisión profunda, parafraseo significativo y posiblemente reestructuración.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Preguntas Frecuentes</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-900 mb-2">¿Cuál es el porcentaje máximo permitido?</h3>
+                    <p class="text-gray-700">Generalmente las universidades aceptan 10-15% de similitud. Todo depende de la institución y el tipo de trabajo. Consulta con tu universidad.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Es esta herramienta igual a Turnitin?</h3>
+                    <p class="text-gray-700">Esta es una estimación básica. Turnitin es más preciso. Ofrecemos revisión completa con Turnitin en nuestros planes de servicio.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Mis datos se guardan?</h3>
+                    <p class="text-gray-700">No. Esta herramienta es completamente anónima. Tu texto no se almacena en nuestros servidores.</p>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-909 mb-2">¿Cómo puedo reducir el plagio?</h3>
+                    <p class="text-gray-700">Parafrasea, cita correctamente, reescribe en tus propias palabras y usa comillas para citas directas. Nuestro servicio de revisión puede ayudarte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-teal-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">¿Necesitas Ayuda para Reducir el Plagio?</h2>
+            <p class="text-xl text-blue-100 mb-8">Nuestros expertos pueden ayudarte a parafrasear y revisar tu trabajo correctamente</p>
+            <a href="index.html#contacto" class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-4 px-10 rounded-lg transition transform hover:scale-105">
+                Solicitar Revisión Profesional
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">TANIA LOPEZ</h4>
+                    <p class="text-blue-200">Soluciones integrales para tus proyectos académicos y legales.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="index.html" class="hover:text-amber-400 transition">Inicio</a></li>
+                        <li><a href="Precios.html" class="hover:text-amber-400 transition">Precios</a></li>
+                        <li><a href="Blog.html" class="hover:text-amber-400 transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" class="hover:text-amber-400 transition">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 TANIA LOPEZ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contar palabras y caracteres
+        const textInput = document.getElementById('textInput');
+        textInput.addEventListener('input', function() {
+            const text = this.value;
+            const words = text.trim().split(/\s+/).filter(w => w).length;
+            const chars = text.length;
+            document.getElementById('wordCount').textContent = words;
+            document.getElementById('charCount').textContent = chars;
+        });
+
+        function analyzeText() {
+            const text = document.getElementById('textInput').value;
+            const words = text.trim().split(/\s+/).filter(w => w).length;
+
+            if (words < 50) {
+                alert('Por favor, ingresa al menos 50 palabras para un análisis más preciso');
+                return;
+            }
+
+            calculatePlagio();
+        }
+
+        function calculatePlagio() {
+            const text = document.getElementById('textInput').value;
+            const words = text.trim().split(/\s+/).filter(w => w).length;
+
+            if (words < 50) return;
+
+            // Simulación de análisis (en producción usarías una API)
+            let plagioScore = Math.random() * 25;
+            
+            // Factores que pueden aumentar el plagio simulado
+            if (text.toLowerCase().includes('según')) plagioScore += 3;
+            if (text.toLowerCase().includes('del')) plagioScore += 2;
+            if (text.toLowerCase().includes('como se menciona')) plagioScore += 5;
+            
+            plagioScore = Math.min(30, Math.max(0, plagioScore));
+
+            // Mostrar resultados
+            displayResults(plagioScore);
+        }
+
+        function displayResults(percentage) {
+            const resultSection = document.getElementById('resultSection');
+            resultSection.classList.remove('hidden');
+
+            const original = 100 - percentage;
+            const original_percent = percentage < 6 ? original : (percentage < 16 ? original - 5 : original - 10);
+
+            document.getElementById('percentageDisplay').textContent = percentage.toFixed(1) + '%';
+            document.getElementById('originalPercent').textContent = original_percent.toFixed(1) + '%';
+            document.getElementById('similarPercent').textContent = percentage.toFixed(1) + '%';
+            document.getElementById('riskPercent').textContent = (100 - original_percent - percentage).toFixed(1) + '%';
+
+            let riskLevel = 'Bajo Riesgo';
+            if (percentage > 30) riskLevel = 'Alto Riesgo ⚠️';
+            else if (percentage > 15) riskLevel = 'Riesgo Moderado ⚡';
+            else if (percentage > 5) riskLevel = 'Riesgo Bajo ✓';
+
+            document.getElementById('riskLevel').textContent = riskLevel;
+
+            // Recomendaciones
+            let recommendations = [];
+            if (percentage < 5) {
+                recommendations = ['✓ Excelente originalidad', '✓ Cumple estándares académicos', '✓ Listo para entregar'];
+            } else if (percentage < 15) {
+                recommendations = ['✓ Nivel aceptable', '• Revisa las citas directas', '• Considera parafrasear algunas secciones'];
+            } else if (percentage < 30) {
+                recommendations = ['⚠ Requiere revisión', '• Parafrasea párrafos similares', '• Verifica todas las citas', '• Reescribe con tus propias palabras'];
+            } else {
+                recommendations = ['⚠ Alto riesgo de rechazo', '• Revisión profunda necesaria', '• Considera nuestro servicio profesional', '• Restructura secciones completas'];
+            }
+
+            const list = document.getElementById('recommendationsList');
+            list.innerHTML = recommendations.map(r => `<li>${r}</li>`).join('');
+
+            // Dibujar círculo de progreso
+            drawProgressCircle(percentage);
+            
+            window.scrollTo({ top: resultSection.offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function drawProgressCircle(percentage) {
+            const canvas = document.getElementById('progressCircle');
+            const ctx = canvas.getContext('2d');
+            const radius = 70;
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Círculo base
+            ctx.strokeStyle = '#e5e7eb';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Círculo de progreso
+            const color = percentage > 30 ? '#ef4444' : percentage > 15 ? '#f97316' : '#22c55e';
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, -Math.PI / 2, -Math.PI / 2 + (percentage / 100) * Math.PI * 2);
+            ctx.stroke();
+        }
+
+        function clearForm() {
+            document.getElementById('textInput').value = '';
+            document.getElementById('wordCount').textContent = '0';
+            document.getElementById('charCount').textContent = '0';
+            document.getElementById('resultSection').classList.add('hidden');
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

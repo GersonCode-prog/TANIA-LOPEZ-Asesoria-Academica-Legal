@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría y Marco Legal | Tu Firma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="FullLogo.png" alt="TANIA LOPEZ Logo" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold">TANIA LOPEZ</h1>
+                        <p class="text-sm text-blue-200">Asesoría Académica & Legal</p>
+                    </div>
+                </a>
+                
+                <!-- Navegación desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                    <a href="index.html#servicios" class="hover:text-amber-400 transition">Servicios</a>
+                    <a href="index.html#contacto" class="hover:text-amber-400 transition">Contacto</a>
+                </nav>
+                
+                <a href="index.html#contacto" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-6 rounded-lg transition transform hover:scale-105">Cotizar</a>
+                
+                <!-- Botón hamburguesa -->
+                <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-white transition duration-300" id="line2"></span>
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line3"></span>
+                </button>
+            </div>
+            
+            <!-- Menú móvil -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-blue-700 pt-4">
+                <a href="index.html#inicio" class="block py-2 hover:text-amber-400 transition">Inicio</a>
+                <a href="index.html#servicios" class="block py-2 hover:text-amber-400 transition">Servicios</a>
+                <a href="index.html#contacto" class="block py-2 hover:text-amber-400 transition">Contacto</a>
+                <a href="index.html#contacto" class="block mt-4 bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition text-center">Cotizar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-800 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <a href="index.html" class="text-blue-200 hover:text-white">Inicio</a>
+                <span class="text-blue-400">/</span>
+                <span class="text-amber-400">Consultoría Legal</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Consultoría Legal y Marco Normativo</h1>
+            <p class="text-xl text-blue-100 max-w-3xl">Protegemos tu investigación con asesoría especializada en derechos de autor, propiedad intelectual y cumplimiento legal para una defensa segura.</p>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Nuestros Servicios Legales</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg border-l-4 border-red-600">
+                    <div class="text-4xl mb-4">📋</div>
+                    <h3 class="text-2xl font-bold text-red-900 mb-4">Asesoría en Derechos de Autor</h3>
+                    <p class="text-gray-700 mb-4">Proteges tus derechos desde el primer momento de creación.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Registro de autor:</strong> Trámites ante oficina de derechos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Licencias Creative Commons:</strong> Modelos de distribución flexible</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Citas y referencias legales:</strong> Cumplimiento normativo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Reclamos por infracción:</strong> Defensa ante plagio</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-red-700 text-white rounded-lg">
+                        <p class="text-sm"><strong>Protección:</strong> Desde el registro hasta la defensa</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-8 shadow-lg border-l-4 border-indigo-600">
+                    <div class="text-4xl mb-4">🔐</div>
+                    <h3 class="text-2xl font-bold text-indigo-900 mb-4">Protección de Propiedad Intelectual</h3>
+                    <p class="text-gray-700 mb-4">Salvaguarda tu investigación original con patentes y marcas.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Solicitud de patentes:</strong> Para descubrimientos innovadores</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Registro de marca:</strong> Protege tu nombre académico</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Secretos comerciales:</strong> Información confidencial</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Cláusulas de confidencialidad:</strong> Para investigaciones sensibles</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-indigo-700 text-white rounded-lg">
+                        <p class="text-sm"><strong>Cobertura:</strong> Nacional e internacional</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 shadow-lg border-l-4 border-yellow-600">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="text-2xl font-bold text-yellow-900 mb-4">Revisión Legal de Contenido Sensible</h3>
+                    <p class="text-gray-700 mb-4">Aseguramos que tu tesis cumple con marcos legales aplicables.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Análisis ético:</strong> Cumplimiento normativo en investigación</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Datos personales:</strong> GDPR, LGPD y normativas locales</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Investigación con sujetos:</strong> Consentimiento informado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Contenido controvertido:</strong> Análisis de responsabilidad civil</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-yellow-700 text-white rounded-lg">
+                        <p class="text-sm"><strong>Garantía:</strong> Cumplimiento legal total</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 shadow-lg border-l-4 border-pink-600">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold text-pink-900 mb-4">Preparación para Defensa Legal</h3>
+                    <p class="text-gray-700 mb-4">Prepararte para cualquier desafío legal durante tu defensa.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Actas de defensa:</strong> Análisis de procedimiento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Preguntas frecuentes:</strong> Anticipación de cuestionamientos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Objeciones legales:</strong> Estrategias de respuesta</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 font-bold mr-3 mt-1">▸</span>
+                            <span class="text-gray-700"><strong>Representación legal:</strong> Si es necesaria durante la defensa</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-pink-700 text-white rounded-lg">
+                        <p class="text-sm"><strong>Resultado:</strong> Defensa confiada y segura</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marco Normativo -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Marco Normativo que Cubrimos</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg border-t-4 border-blue-900">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">📚 Normativas Académicas</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✓ Reglamentos de universidades acreditadas</li>
+                        <li>✓ Normativas de postgrado y doctorado</li>
+                        <li>✓ Estándares de comités de ética</li>
+                        <li>✓ Regulaciones de investigación científica</li>
+                        <li>✓ Requisitos de titulación oficial</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg border-t-4 border-amber-500">
+                    <h3 class="text-2xl font-bold text-amber-900 mb-4">⚖️ Normativas Legales</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✓ Ley de Derechos de Autor (Código Civil)</li>
+                        <li>✓ Propiedad Intelectual (OMPI, TRIPS)</li>
+                        <li>✓ Protección de datos personales (GDPR, LGPD)</li>
+                        <li>✓ Responsabilidad civil por contenido</li>
+                        <li>✓ Leyes de ciberseguridad aplicables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Preguntas Frecuentes</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">¿Necesito registro de derechos de autor antes de defender?</h3>
+                    <p class="text-gray-700">No es obligatorio, pero es altamente recomendado. Te protege desde la creación y es prueba legal de originalidad.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">¿Qué pasa si mi contenido está en una zona legal gris?</h3>
+                    <p class="text-gray-700">Nuestros abogados analizan el contexto y te aconsejan sobre cómo proceder legalmente sin comprometer tu trabajo.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">¿Cubre también investigaciones con datos sensibles?</h3>
+                    <p class="text-gray-700">Sí, tenemos experiencia en GDPR, LGPD y normativas de protección. Asesoramos sobre consentimiento informado y confidencialidad.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">¿Qué ocurre si encuentran una infracción durante la defensa?</h3>
+                    <p class="text-gray-700">Estamos preparados para eso. Te acompañamos en la defensa legal y estrategia de respuesta en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-teal-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Tienes Dudas sobre la Legalidad de tu Tesis?</h2>
+            <p class="text-xl text-blue-100 mb-8">Obtén asesoría legal especializada de nuestros abogados</p>
+            <a href="index.html#contacto" class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-4 px-10 rounded-lg transition transform hover:scale-105 text-lg">
+                Agendar Consulta
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">TANIA LOPEZ</h4>
+                    <p class="text-blue-200">Soluciones integrales para tus proyectos académicos y legales.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="index.html" class="hover:text-amber-400 transition">Inicio</a></li>
+                        <li><a href="Academico.html" class="hover:text-amber-400 transition">Asesoría Académica</a></li>
+                        <li><a href="index.html#contacto" class="hover:text-amber-400 transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" class="hover:text-amber-400 transition">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 TANIA LOPEZ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

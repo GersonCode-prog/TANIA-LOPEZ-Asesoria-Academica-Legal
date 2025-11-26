@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog con tips, guías y consejos para tu tesis, defensa exitosa y normas APA">
+    <title>Blog | Tips de Tesis y Defensa Exitosa | Tu Firma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="FullLogo.png" alt="TANIA LOPEZ Logo" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold">TANIA LOPEZ</h1>
+                        <p class="text-sm text-blue-200">Asesoría Académica & Legal</p>
+                    </div>
+                </a>
+                
+                <!-- Navegación desktop -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm">
+                    <a href="index.html#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                    <a href="index.html#servicios" class="hover:text-amber-400 transition">Servicios</a>
+                    <a href="Precios.html" class="hover:text-amber-400 transition">Precios</a>
+                    <a href="Blog.html" class="text-amber-400">Blog</a>
+                    <a href="index.html#contacto" class="hover:text-amber-400 transition">Contacto</a>
+                </nav>
+                
+                <a href="index.html#contacto" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-6 rounded-lg transition">Cotizar</a>
+                
+                <!-- Botón hamburguesa -->
+                <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-white transition duration-300" id="line2"></span>
+                    <span class="w-6 h-0.5 bg-white transition transform duration-300" id="line3"></span>
+                </button>
+            </div>
+            
+            <!-- Menú móvil -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-blue-700 pt-4">
+                <a href="index.html#inicio" class="block py-2 hover:text-amber-400 transition">Inicio</a>
+                <a href="index.html#servicios" class="block py-2 hover:text-amber-400 transition">Servicios</a>
+                <a href="Precios.html" class="block py-2 hover:text-amber-400 transition">Precios</a>
+                <a href="Blog.html" class="block py-2 text-amber-400">Blog</a>
+                <a href="index.html#contacto" class="block py-2 hover:text-amber-400 transition">Contacto</a>
+                <a href="index.html#contacto" class="block mt-4 bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition text-center">Cotizar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-blue-900 to-teal-800 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Blog: Guía Completa para tu Tesis</h1>
+            <p class="text-xl text-blue-100">Tips, estrategias y recursos para lograr una defensa exitosa</p>
+        </div>
+    </section>
+
+    <!-- Búsqueda y Filtros -->
+    <section class="py-8 bg-white border-b">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                <input type="text" placeholder="Buscar artículos..." class="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800">📚 Todos</button>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-lg hover:bg-gray-100">📋 Formatos</button>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-lg hover:bg-gray-100">🎯 Defensa</button>
+                    <button class="px-4 py-2 border-2 border-gray-300 rounded-lg hover:bg-gray-100">⚖️ Legal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Post 1 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-48 flex items-center justify-center text-white text-6xl">📋</div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm font-semibold">Formatos</span>
+                            <span class="text-gray-500 text-sm">15 Nov 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-900 mb-3">Guía Completa: Formato APA 7ª Edición</h2>
+                        <p class="text-gray-600 mb-4">Domina los detalles del formato APA más reciente. Citas, referencias, márgenes y todo lo que necesitas saber para cumplir con los estándares académicos.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">5 min lectura</span>
+                            <a href="#" class="text-blue-900 font-bold hover:text-blue-600">Leer más →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-amber-500 to-amber-600 h-48 flex items-center justify-center text-white text-6xl">✏️</div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-amber-100 text-amber-900 px-3 py-1 rounded-full text-sm font-semibold">Redacción</span>
+                            <span class="text-gray-500 text-sm">12 Nov 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-900 mb-3">10 Tips para Mejorar tu Redacción Académica</h2>
+                        <p class="text-gray-600 mb-4">Estrategias probadas para elevar la calidad de tu escritura. Claridad, coherencia y precisión: los pilares de una tesis excelente.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">6 min lectura</span>
+                            <a href="#" class="text-blue-900 font-bold hover:text-blue-600">Leer más →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-48 flex items-center justify-center text-white text-6xl">🎯</div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-green-100 text-green-900 px-3 py-1 rounded-full text-sm font-semibold">Defensa</span>
+                            <span class="text-gray-500 text-sm">10 Nov 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-900 mb-3">Cómo Prepararse para una Defensa Exitosa</h2>
+                        <p class="text-gray-600 mb-4">Guía paso a paso para defender tu tesis con confianza. Incluye técnicas de presentación, manejo de preguntas y estrategias de comunicación.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">8 min lectura</span>
+                            <a href="#" class="text-blue-900 font-bold hover:text-blue-600">Leer más →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-red-500 to-red-600 h-48 flex items-center justify-center text-white text-6xl">🔍</div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-red-100 text-red-900 px-3 py-1 rounded-full text-sm font-semibold">Plagio</span>
+                            <span class="text-gray-500 text-sm">8 Nov 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-900 mb-3">¿Cómo Evitar el Plagio Accidental?</h2>
+                        <p class="text-gray-600 mb-4">Aprende a citar correctamente y a parafraser sin perder originalidad. Todo sobre los métodos para garantizar una tesis 100% original.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">7 min lectura</span>
+                            <a href="#" class="text-blue-900 font-bold hover:text-blue-600">Leer más →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-48 flex items-center justify-center text-white text-6xl">📊</div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-purple-100 text-purple-900 px-3 py-1 rounded-full text-sm font-semibold">Metodología</span>
+                            <span class="text-gray-500 text-sm">5 Nov 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-900 mb-3">Investigación Cualitativa vs Cuantitativa</h2>
+                        <p class="text-gray-600 mb-4">Diferencias, ventajas y cómo elegir el método correcto para tu investigación. Incluye ejemplos reales de cada enfoque.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">9 min lectura</span>
+                            <a href="#" class="text-blue-900 font-bold hover:text-blue-600">Leer más →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 6 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 h-48 flex items-center justify-center text-white text-6xl">⚖️</div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-indigo-100 text-indigo-900 px-3 py-1 rounded-full text-sm font-semibold">Legal</span>
+                            <span class="text-gray-500 text-sm">3 Nov 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-900 mb-3">Aspectos Legales que Debes Conocer</h2>
+                        <p class="text-gray-600 mb-4">Derechos de autor, confidencialidad y normativas legales aplicables a tu tesis. Protege tu trabajo académico adecuadamente.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">10 min lectura</span>
+                            <a href="#" class="text-blue-900 font-bold hover:text-blue-600">Leer más →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">Recibe Tips Exclusivos en tu Email</h2>
+            <p class="text-xl text-blue-100 mb-8">Suscríbete a nuestro newsletter y obtén acceso a guías, plantillas y estrategias exclusivas</p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Tu email..." class="flex-1 px-4 py-3 rounded-lg text-gray-900">
+                <button class="bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold px-6 py-3 rounded-lg transition">Suscribir</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">TANIA LOPEZ</h4>
+                    <p class="text-blue-200">Soluciones integrales para tus proyectos académicos y legales.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="index.html" class="hover:text-amber-400 transition">Inicio</a></li>
+                        <li><a href="Precios.html" class="hover:text-amber-400 transition">Precios</a></li>
+                        <li><a href="Testimonios.html" class="hover:text-amber-400 transition">Testimonios</a></li>
+                        <li><a href="CasosDeEstudio.html" class="hover:text-amber-400 transition">Casos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" class="hover:text-amber-400 transition">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 TANIA LOPEZ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
