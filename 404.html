@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 - Página no encontrada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 10;
+      padding: 20px;
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: clamp(5rem, 15vw, 12rem);
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: hue 10s infinite linear;
+      margin: 0 0 10px 0;
+      line-height: 1;
+    }
+
+    p {
+      font-size: clamp(1.1rem, 4vw, 1.8rem);
+      margin: 15px 0;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 40px;
+      background: #feca57;
+      color: #000;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(254, 202, 87, 0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(254, 202, 87, 0.6);
+    }
+
+    /* Astronauta SIEMPRE visible, pero responsivo */
+    .astronaut {
+      position: absolute;
+      width: clamp(80px, 20vw, 200px); /* Pequeño en móvil, grande en escritorio */
+      top: clamp(5%, 10vh, 15%);
+      left: clamp(2%, 5vw, 5%);
+      animation: float 6s ease-in-out infinite;
+      pointer-events: none;
+      opacity: 0.9;
+      object-fit: contain;
+      z-index: 5; /* Detrás del texto pero visible */
+    }
+
+    @keyframes hue {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(5deg); }
+      50% { transform: translateY(-15px) rotate(-5deg); }
+    }
+
+    /* Ajustes finos para móviles */
+    @media (max-width: 768px) {
+      .container { margin-top: 10vh; } /* Baja un poco el texto si el astronauta está arriba */
+      .btn { padding: 12px 35px; }
+      .astronaut { top: 5%; left: 5%; } /* Esquina superior izquierda */
+    }
+
+    @media (max-width: 480px) {
+      .astronaut { top: 3%; left: 3%; width: 80px; } /* Súper pequeño pero visible */
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <!-- Tu imagen local -->
+  <img src="astronauta.png" alt="Astronauta perdido" class="astronaut" onerror="this.style.display='none'">
+
+  <div class="container">
+    <h1>404</h1>
+    <p>¡Houston, tenemos un problema!</p>
+    <p>La página que buscas se perdió en el espacio...</p>
+    <a href="/" class="btn">Volver al planeta Tierra</a>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    
+    let particlesArray = [];
+    const numberOfParticles = window.innerWidth < 768 ? 80 : 150;
+
+    class Particle {
+      constructor(){
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 4 + 1;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+      }
+      update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.size > 0.2) this.size -= 0.01;
+      }
+      draw(){
+        ctx.fillStyle = 'rgba(255,255,255,0.8)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function init(){
+      particlesArray = [];
+      for(let i = 0; i < numberOfParticles; i++){
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animate(){
+      ctx.clearRect(0,0,canvas.width, canvas.height);
+      particlesArray.forEach((p, i) => {
+        p.update();
+        p.draw();
+        if(p.size <= 0.3){
+          particlesArray.splice(i,1);
+          particlesArray.push(new Particle());
+        }
+      });
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      init();
+    });
+  </script>
+</body>
+</html>
